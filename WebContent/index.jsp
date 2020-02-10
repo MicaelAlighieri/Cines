@@ -22,7 +22,7 @@
 			ResultSet rs = stmt.executeQuery("select * from ENTRADAS");
 			out.println("<br>Conexion correcta");
 			while (rs.next()) {
-				out.println("<br>-o- Comprador: " + rs.getString("comprador"));
+				out.println("<br>-o-isdbf Comprador: " + rs.getString("comprador"));
 			}
 			rs.close();
 			stmt.close();
