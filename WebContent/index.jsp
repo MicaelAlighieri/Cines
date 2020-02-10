@@ -13,17 +13,16 @@
 	<%
 		try {
 			Context initCtx = new InitialContext();
-			//DataSource dataSource = (DataSource) initCtx.lookup("java:/cine"); --> Para WildFly
-			//DataSource dataSource = (DataSource) initCtx.lookup("java:comp/env/jdbc/cine"); --> Para Tomcat
+			// --> Para WildFly
+			//DataSource dataSource = (DataSource) initCtx.lookup("java:/cine")
+			// --> Para Tomcat
 			DataSource dataSource = (DataSource) initCtx.lookup("java:comp/env/jdbc/cine");
-			//;
 			Connection conexion = dataSource.getConnection();
 			Statement stmt = conexion.createStatement(); //Objeto Statement para consultas.
 			ResultSet rs = stmt.executeQuery("select * from ENTRADAS");
 			out.println("<br>Conexion correcta");
 			while (rs.next()) {
-				out.println("<br>-o Comprador: " + rs.getString("comprador"));
-				;
+				out.println("<br>-o- Comprador: " + rs.getString("comprador"));
 			}
 			rs.close();
 			stmt.close();
