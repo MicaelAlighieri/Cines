@@ -20,7 +20,8 @@
 			Connection conexion = dataSource.getConnection();
 			Statement stmt = conexion.createStatement(); //Objeto Statement para consultas.
 			ResultSet rs = stmt.executeQuery("select * from ENTRADAS");
-			out.println("<br>Conexion correcta");
+			out.println("<br>Conexion correcta ---------");
+			int numeroDePrueba = 0;
 			while (rs.next()) {
 				//
 				out.println("<br>-o-ll Comprador: " + rs.getString("comprador"));
