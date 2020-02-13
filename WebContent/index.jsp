@@ -23,7 +23,7 @@
 			out.println("<br>Conexion correcta");
 			while (rs.next()) {
 				//
-				out.println("<br>-o-i Comprador: " + rs.getString("comprador"));
+				out.println("<br>-o-ll Comprador: " + rs.getString("comprador"));
 			}
 			rs.close();
 			stmt.close();
